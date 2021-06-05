@@ -52,9 +52,9 @@ def run_classifier():
         for seed in random_seeds:    
             print("current random seed: ", seed)
             if train_mode == "unified":
-                filename1 = '/home/ubuntu/Stance_Multi_S3/raw_train_all_onecol.csv'
-                filename2 = '/home/ubuntu/Stance_Multi_S3/raw_val_all_onecol.csv'
-                filename3 = '/home/ubuntu/Stance_Multi_S3/raw_test_all_onecol.csv'
+                filename1 = '../data/raw_train_all_onecol.csv'
+                filename2 = '../data/raw_val_all_onecol.csv'
+                filename3 = '../data/raw_test_all_onecol.csv'
                 x_train,y_train,x_train_target,y_train2,x_train_target2 = \
                                             pp.clean_all(filename1,'Stance1',normalization_dict)
                 x_val,y_val,x_val_target,y_val2,x_val_target2 = \
@@ -62,9 +62,9 @@ def run_classifier():
                 x_test,y_test,x_test_target,y_test2,x_test_target2 = \
                                             pp.clean_all(filename3,'Stance1',normalization_dict)
             elif train_mode == "adhoc":
-                filename1 = '/home/ubuntu/Stance_Multi_S3/raw_train_'+target_word_pair[target_index]+'.csv'
-                filename2 = '/home/ubuntu/Stance_Multi_S3/raw_val_'+target_word_pair[target_index]+'.csv'
-                filename3 = '/home/ubuntu/Stance_Multi_S3/raw_test_'+target_word_pair[target_index]+'.csv'
+                filename1 = '../data/raw_train_'+target_word_pair[target_index]+'.csv'
+                filename2 = '../data/raw_val_'+target_word_pair[target_index]+'.csv'
+                filename3 = '../data/raw_test_'+target_word_pair[target_index]+'.csv'
                 x_train,y_train,x_train_target,y_train2,x_train_target2 = pp.clean_all(filename1,col,normalization_dict)
                 x_val,y_val,x_val_target,y_val2,x_val_target2 = pp.clean_all(filename2,col,normalization_dict)
                 x_test,y_test,x_test_target,y_test2,x_test_target2 = pp.clean_all(filename3,col,normalization_dict)
