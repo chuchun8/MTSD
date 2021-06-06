@@ -17,7 +17,7 @@ For BERTweet-A in `merged` training setting, run
 cd src/
 python train_model.py \
     --input_target all \
-    --model_select BERTweet \
+    --model_select Bertweet \
     --train_mode unified \
     --col Stance1 \
     --lr 2e-5 \
@@ -31,7 +31,7 @@ For BERTweet-A in `adhoc` training setting and target `Hillary Clinton` of targe
 cd src/
 python train_model.py \
     --input_target trump_hillary \
-    --model_select BERTweet \
+    --model_select Bertweet \
     --train_mode adhoc \
     --col Stance2 \
     --lr 2e-5 \
@@ -42,7 +42,7 @@ python train_model.py \
 ```
 `input_target` can take one of the following target-pairs [`trump_hillary`, `trump_ted`, `hillary_bernie`] in adhoc setting and take [`all`] in merged setting.
 
-`model_select` includes two options: [`BERTweet` and `BERT`].
+`model_select` includes two options: [`Bertweet` and `Bert`].
 
 `col` indicates the target in each target-pair. For example, for the target-pair `Trump-Clinton`, we have `Stance1` for Trump and `Stance2` for Clinton.
 
